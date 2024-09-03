@@ -4,3 +4,11 @@ function validarSuperficie(superficie) {
 }
 
 export { validarSuperficie };
+
+function validarPosicionInicial(pInicial, superficie) {
+    const [x, y] = pInicial.split(',').map(Number);
+    const [xMax, yMax] = superficie.split(',').map(Number);
+    return x >= 0 && x <= xMax && y >= 0 && y <= yMax;
+}
+
+export { validarPosicionInicial };
