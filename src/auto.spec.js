@@ -49,3 +49,12 @@ describe("Validaciones", () => {
     });
 });
 
+import { cambioPosicion } from "./auto.js";
+
+describe("Validaciones", () => {
+    it("Deberia validar movimiento del auto/ Cambio de posicion y direccion", () => {
+        expect(cambioPosicion("2,3", "O", "IAADAIA", 5, 5)).toEqual({x: 1, y: 0, direccion: "S"});
+    });
+});
+
+

@@ -102,3 +102,29 @@ function girarDerecha(direccion) {
 }
 
 export { girarDerecha };
+
+
+function cambioPosicion(posInicial, dirInicial, comando, xMax, yMax) {
+    let posicion = posInicial;
+    let direccion = dirInicial;
+
+    for(let i = 0; i < comando.length; i++) {
+        const letra = comando[i];
+        if (letra === "A") {
+            const nuevaPosicion = avanzar(posicion, direccion, xMax, yMax);
+            if (nuevaPosicion === "No se puede avanzar") {
+                return { error: `No se puede avanzar en la dirección ${direccion} desde la posición ${posicion}` };
+            }
+            posicion = nuevaPosicion;
+        } else if (letra === "I") {
+            direccion = girarIzquierda(direccion);
+        } else if (letra === "D") {
+            direccion = girarDerecha(direccion);
+        }
+    }
+    let [x, y] = posicion.split(',').map(Number);
+    
+    return {x, y, direccion};
+}
+
+export { cambioPosicion };
