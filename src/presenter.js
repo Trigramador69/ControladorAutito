@@ -13,5 +13,3 @@ form.addEventListener("submit", (event) => {
 
   div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
 });
-
-

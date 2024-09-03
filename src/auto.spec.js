@@ -33,3 +33,11 @@ describe("Validaciones", () => {
     });
 });
 
+import { girarIzquierda } from "./auto.js";
+
+describe("Validaciones", () => {
+    it("Deberia validar giro Izquierda", () => {
+        expect(girarIzquierda("O")).toEqual("S");
+    });
+});
+

@@ -56,3 +56,26 @@ function avanzar(posicion, direccion, xMax, yMax) {
 }
 
 export { avanzar };
+
+function girarIzquierda(direccion) {
+    let nuevaDireccion;
+    switch(direccion) {
+        case "N":
+            nuevaDireccion = "O";
+            break;
+        case "S":
+            nuevaDireccion = "E";
+            break;
+        case "E":
+            nuevaDireccion = "N";
+            break;
+        case "O":
+            nuevaDireccion = "S";
+            break;
+        default:
+            console.error("Dirección Inválida");
+    }
+    return nuevaDireccion;
+}
+
+export { girarIzquierda };
