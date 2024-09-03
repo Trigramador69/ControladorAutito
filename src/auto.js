@@ -79,3 +79,26 @@ function girarIzquierda(direccion) {
 }
 
 export { girarIzquierda };
+
+function girarDerecha(direccion) {
+    let nuevaDireccion;
+    switch(direccion) {
+        case "N":
+            nuevaDireccion = "E";
+            break;
+        case "S":
+            nuevaDireccion = "O";
+            break;
+        case "E":
+            nuevaDireccion = "S";
+            break;
+        case "O":
+            nuevaDireccion = "N";
+            break;
+        default:
+            console.error("Dirección Inválida");
+    }
+    return nuevaDireccion;
+}
+
+export { girarDerecha };
