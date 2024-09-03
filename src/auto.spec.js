@@ -14,3 +14,13 @@ describe("Validaciones", () => {
         expect(validarPosicionInicial("6,5", "5,5")).toEqual(false);
     });
 });
+
+import { validarDireccion } from "./auto.js";
+
+describe("Validaciones", () => {
+    it("Deberia validar direccion inicial del auto", () => {
+        expect(validarDireccion("N")).toEqual(true);
+        expect(validarDireccion("X")).toEqual(undefined);
+    });
+});
+

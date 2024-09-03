@@ -12,3 +12,12 @@ function validarPosicionInicial(pInicial, superficie) {
 }
 
 export { validarPosicionInicial };
+
+function validarDireccion(direccion) {
+    if(direccion === "N" || direccion === "S" || direccion === "E" || direccion === "O"){
+        return true;
+    }
+}
+
+export { validarDireccion };
+
