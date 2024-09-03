@@ -21,3 +21,38 @@ function validarDireccion(direccion) {
 
 export { validarDireccion };
 
+function avanzar(posicion, direccion, xMax, yMax) {
+    let [x, y] = posicion.split(',').map(Number);
+
+    switch(direccion) {
+        case "N":
+            if(y + 1 > yMax) {
+                return "No se puede avanzar";
+            }
+            y += 1;
+            break;
+        case "S":
+            if(y - 1 < 0) {
+                return "No se puede avanzar";
+            }
+            y -= 1;
+            break;
+        case "E":
+            if(x + 1 > xMax) {
+                return "No se puede avanzar";
+            }
+            x += 1;
+            break;
+        case "O":
+            if(x - 1 < 0) {
+                return "No se puede avanzar";
+            }
+            x -= 1;
+            break;
+        default:
+            console.error("Dirección Inválida");
+    }
+    return `${x},${y}`;
+}
+
+export { avanzar };

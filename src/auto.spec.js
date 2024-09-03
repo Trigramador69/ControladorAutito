@@ -24,3 +24,12 @@ describe("Validaciones", () => {
     });
 });
 
+import { avanzar } from "./auto.js";
+
+describe("Validaciones", () => {
+    it("Deberia validar avanzar la posicion del auto", () => {
+        expect(avanzar("3,4", "N", 5, 5)).toEqual("3,5");
+        expect(avanzar("3,5", "N", 5, 5)).toEqual("No se puede avanzar");
+    });
+});
+
